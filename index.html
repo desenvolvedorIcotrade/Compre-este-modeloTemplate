@@ -1,6 +1,87 @@
 <!DOCTYPE html>   Em Desenvolvimento          <img class="irc_mi" src="https://cdn.dribbble.com/users/1761084/screenshots/3630227/pinterest.gif" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="228" style="margin-top: 63px;" alt="Resultado de imagem para gif pinterest">
-<html lang="en">
-<img center class="irc_mi" src="https://cdn.dribbble.com/users/729829/screenshots/2712522/galshir.gif" alt="Resultado de imagem para Designer gif" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="600" height="220" style="center-top: 48px;">
+<html lang="en">import React from "react";
+import { render } from "react-dom";
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  Heading,
+  Link,
+  Text,
+  TextField
+} from "gestalt";
+
+const Section = ({ children, title }) => (
+  <Box padding={2}>
+    <Box marginBottom={1}>
+      <Heading size="xs">{title}</Heading>
+    </Box>
+    {children}
+  </Box>
+);
+
+const Demo = () => (
+  <Box>
+    <Section title="Avatar">
+      <Box width={40}>
+        <Avatar
+          src="jpg"
+          name=" Epps"
+        />
+      </Box>
+    </Section>
+
+    <Section title="Button">
+      <Button text="Button" />
+    </Section>
+
+    <Section title="Box">
+      <Box display="flex">
+        <Box column={4} color="lightGray">
+          <Text>1</Text>
+        </Box>
+        <Box column={4} color="darkGray">
+          <Text color="white">2</Text>
+        </Box>
+        <Box column={4} color="lightGray">
+          <Text>3</Text>
+        </Box>
+      </Box>
+    </Section>
+
+    <Section title="Card">
+      <Box maxWidth={200} padding={2} column={12}>
+        <Card>
+          <Link color="darkGray" href="">
+            <Avatar
+              name="Ben Silbermann"
+              src=".jpg"
+            />
+            <Box paddingX={3} paddingY={2}>
+              <Text align="center" bold>
+                {"Ben"}
+              </Text>
+            </Box>
+          </Link>
+          <Button color="red" text="Follow" />
+        </Card>
+      </Box>
+    </Section>
+
+    <Section title="Text">
+      <Text>Text</Text>
+    </Section>
+
+    <Section title="TextField">
+      <TextField onChange={() => {}} id="textfield" placeholder="Placeholder" />
+    </Section>
+  </Box>
+);
+
+render(<Demo />, document.getElementById("root"));
+
+
   <head><meta name="p:domain_verify" content="89bdfae823df12c4a1e76c3137d72993"/>
 
 

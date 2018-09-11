@@ -1,2 +1,2 @@
 
-#https://criativasitesjoinville.business.site/
+*https://criativasitesjoinville.business.site/
